@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" 
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/imgBtnRandom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_img_btn"
+            android:src="@drawable/ic_game_80x80" />
+
+        <ImageButton
+            android:id="@+id/ImageButton01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_img_btn"
+            android:src="@drawable/ic_game_80x80" />
+
+        <ImageButton
+            android:id="@+id/imgBtnClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_img_btn"
+            android:src="@drawable/ic_game_80x80" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/imgBtnType_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_img_btn"
+            android:src="@drawable/ic_game_80x80" />
+
+        <ImageButton
+            android:id="@+id/imgBtnType_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_img_btn"
+            android:src="@drawable/ic_game_80x80" />
+
+        <ImageButton
+            android:id="@+id/imgBtnType_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_img_btn"
+            android:src="@drawable/ic_game_80x80" />
+    </LinearLayout>
+
+</LinearLayout>

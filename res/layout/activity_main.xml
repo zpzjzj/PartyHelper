@@ -5,32 +5,47 @@
     android:orientation="vertical" >
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:orientation="horizontal" 
-        android:gravity="center_vertical">
+        android:gravity="center"
+        android:orientation="horizontal" >
 
-        <ImageButton
-            android:id="@+id/imgBtnRandom"
+        <TextView
+            android:id="@+id/imgBtnShuffle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/content_img_btn"
-            android:src="@drawable/ic_game_80x80" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/shuffle_text"
+            android:drawableTop="@drawable/shuffle_dark_80x80"
+            android:gravity="center"
+            android:text="@string/shuffle_text"
+            android:textSize="20sp" />
 
-        <ImageButton
-            android:id="@+id/ImageButton01"
+        <TextView
+            android:id="@+id/imgBtnDice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/content_img_btn"
-            android:src="@drawable/ic_game_80x80" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/dice_text"
+            android:drawableTop="@drawable/dice_dark_80x80"
+            android:gravity="center"
+            android:text="@string/dice_text"
+            android:textSize="20sp" />
 
-        <ImageButton
+        <TextView
             android:id="@+id/imgBtnClock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/content_img_btn"
-            android:src="@drawable/ic_game_80x80" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/clock_text"
+            android:drawableTop="@drawable/clock_80x80"
+            android:gravity="center"
+            android:text="@string/clock_text"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout

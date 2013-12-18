@@ -32,21 +32,34 @@ public final class R {
     }
     public static final class drawable {
         public static final int blue_action_search=0x7f020000;
-        public static final int ic_action_search=0x7f020001;
-        public static final int ic_game_128x128=0x7f020002;
-        public static final int ic_game_32x32=0x7f020003;
-        public static final int ic_game_48x48=0x7f020004;
-        public static final int ic_game_512x512=0x7f020005;
-        public static final int ic_game_64x64=0x7f020006;
-        public static final int ic_game_80x80=0x7f020007;
-        public static final int ic_launcher=0x7f020008;
+        public static final int camera_512x512=0x7f020001;
+        public static final int camera_80x80=0x7f020002;
+        public static final int checkbox_empty_512x512=0x7f020003;
+        public static final int clock_80x80=0x7f020004;
+        public static final int dice_512x512=0x7f020005;
+        public static final int dice_80x80=0x7f020006;
+        public static final int dice_dark_512x512=0x7f020007;
+        public static final int dice_dark_80x80=0x7f020008;
+        public static final int ic_action_search=0x7f020009;
+        public static final int ic_game_128x128=0x7f02000a;
+        public static final int ic_game_32x32=0x7f02000b;
+        public static final int ic_game_48x48=0x7f02000c;
+        public static final int ic_game_512x512=0x7f02000d;
+        public static final int ic_game_64x64=0x7f02000e;
+        public static final int ic_game_80x80=0x7f02000f;
+        public static final int ic_launcher=0x7f020010;
+        public static final int shuffle_512x512=0x7f020011;
+        public static final int shuffle_80x80=0x7f020012;
+        public static final int shuffle_dark_80x80=0x7f020013;
+        public static final int xxx_512x512=0x7f020014;
+        public static final int xxx_80x80=0x7f020015;
     }
     public static final class id {
-        public static final int ImageButton01=0x7f0b0006;
         public static final int action_search=0x7f0b0011;
         public static final int action_settings=0x7f0b0012;
         public static final int imgBtnClock=0x7f0b0007;
-        public static final int imgBtnRandom=0x7f0b0005;
+        public static final int imgBtnDice=0x7f0b0006;
+        public static final int imgBtnShuffle=0x7f0b0005;
         public static final int imgBtnType_1=0x7f0b0008;
         public static final int imgBtnType_2=0x7f0b0009;
         public static final int imgBtnType_3=0x7f0b000a;
@@ -79,8 +92,10 @@ public final class R {
         public static final int app_name=0x7f070000;
         public static final int button_send=0x7f070003;
         public static final int child_games=0x7f07000d;
-        public static final int content_img_btn=0x7f070012;
-        public static final int content_img_btn_clock=0x7f070011;
+        public static final int clock_text=0x7f070013;
+        public static final int content_img_btn=0x7f070015;
+        public static final int content_img_btn_clock=0x7f070014;
+        public static final int dice_text=0x7f070012;
         public static final int edit_message=0x7f070001;
         public static final int hello_world=0x7f070007;
         public static final int label_age=0x7f07000e;
@@ -89,6 +104,7 @@ public final class R {
         public static final int label_type=0x7f07000a;
         public static final int puzzle_games=0x7f07000b;
         public static final int search_hint=0x7f070002;
+        public static final int shuffle_text=0x7f070011;
         public static final int title_activity_items_list=0x7f070008;
         public static final int title_activity_main=0x7f070005;
         public static final int title_activity_search=0x7f070009;

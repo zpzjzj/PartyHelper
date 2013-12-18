@@ -47,6 +47,9 @@
     	<item>10人以上</item>
     </string-array>
     
+    <string name="shuffle_text">摇一摇</string>
+   	<string name="dice_text">掷骰子</string>
+   	<string name="clock_text">计时器</string>
     <string name="content_img_btn_clock">jump to the countdown clock</string>
     <string name="content_img_btn">a button with image</string>
 </resources>

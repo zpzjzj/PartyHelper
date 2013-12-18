@@ -53,6 +53,7 @@ public final class R {
         public static final int shuffle_dark_80x80=0x7f020013;
         public static final int xxx_512x512=0x7f020014;
         public static final int xxx_80x80=0x7f020015;
+        public static final int xxx_dark_80x80=0x7f020016;
     }
     public static final class id {
         public static final int action_search=0x7f0b0011;

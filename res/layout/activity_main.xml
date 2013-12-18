@@ -54,26 +54,41 @@
         android:layout_weight="1"
         android:orientation="horizontal" >
 
-        <ImageButton
+        <TextView
             android:id="@+id/imgBtnType_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/content_img_btn"
-            android:src="@drawable/ic_game_80x80" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/puzzle_games"
+            android:drawableTop="@drawable/clock_80x80"
+            android:gravity="center"
+            android:text="@string/puzzle_games"
+            android:textSize="20sp" />
 
-        <ImageButton
+        <TextView
             android:id="@+id/imgBtnType_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/content_img_btn"
-            android:src="@drawable/ic_game_80x80" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/adult_games"
+            android:drawableTop="@drawable/clock_80x80"
+            android:gravity="center"
+            android:text="@string/adult_games"
+            android:textSize="20sp" />
 
-        <ImageButton
+        <TextView
             android:id="@+id/imgBtnType_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/content_img_btn"
-            android:src="@drawable/ic_game_80x80" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/child_games"
+            android:drawableTop="@drawable/clock_80x80"
+            android:gravity="center"
+            android:text="@string/child_games"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </LinearLayout>

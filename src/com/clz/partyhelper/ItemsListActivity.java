@@ -140,7 +140,10 @@ public class ItemsListActivity extends Activity{
 		typeView.setGravity(Gravity.CENTER);
 		typeView.setWidth(300);
 		typeView.setTextSize(20);
-		typeView.setText("ALL TYPES");
+		
+		Intent intent = getIntent();
+		String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+		typeView.setText(message);
 		return true;
 	}
 	

@@ -1,7 +1,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -18,7 +19,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:contentDescription="@string/shuffle_text"
-            android:drawableTop="@drawable/shuffle_dark_80x80"
+            android:drawableTop="@drawable/shake_80x80"
             android:gravity="center"
             android:text="@string/shuffle_text"
             android:textSize="20sp" />
@@ -49,9 +50,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
+        android:gravity="center_horizontal"
         android:orientation="horizontal" >
 
         <TextView
@@ -61,7 +63,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:contentDescription="@string/puzzle_games"
-            android:drawableTop="@drawable/clock_80x80"
+            android:drawableTop="@drawable/bulb_80x80"
             android:gravity="center"
             android:text="@string/puzzle_games"
             android:textSize="20sp" />
@@ -73,7 +75,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:contentDescription="@string/adult_games"
-            android:drawableTop="@drawable/clock_80x80"
+            android:drawableTop="@drawable/xxx_dark_80x80"
             android:gravity="center"
             android:text="@string/adult_games"
             android:textSize="20sp" />
@@ -85,7 +87,27 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:contentDescription="@string/child_games"
-            android:drawableTop="@drawable/clock_80x80"
+            android:drawableTop="@drawable/flower_80x80"
+            android:gravity="center"
+            android:text="@string/child_games"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50sp"
+        android:background="#dddddd"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+        
+                <TextView
+            android:id="@+id/buttom_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/child_games"
+            android:drawableTop="@drawable/camera_dark_48x48"
             android:gravity="center"
             android:text="@string/child_games"
             android:textSize="20sp" />

@@ -32,41 +32,28 @@ public final class R {
     }
     public static final class drawable {
         public static final int blue_action_search=0x7f020000;
-        public static final int bulb_300x300=0x7f020001;
-        public static final int bulb_80x80=0x7f020002;
-        public static final int camera_512x512=0x7f020003;
-        public static final int camera_64x64=0x7f020004;
-        public static final int camera_80x80=0x7f020005;
-        public static final int camera_dark_48x48=0x7f020006;
-        public static final int camera_dark_512x512=0x7f020007;
-        public static final int camera_dark_64x64=0x7f020008;
-        public static final int checkbox_empty_512x512=0x7f020009;
-        public static final int clock_80x80=0x7f02000a;
-        public static final int dice_512x512=0x7f02000b;
-        public static final int dice_80x80=0x7f02000c;
-        public static final int dice_dark_512x512=0x7f02000d;
-        public static final int dice_dark_80x80=0x7f02000e;
-        public static final int flower_512x512=0x7f02000f;
-        public static final int flower_80x80=0x7f020010;
-        public static final int ic_action_search=0x7f020011;
-        public static final int ic_game_128x128=0x7f020012;
-        public static final int ic_game_32x32=0x7f020013;
-        public static final int ic_game_48x48=0x7f020014;
-        public static final int ic_game_512x512=0x7f020015;
-        public static final int ic_game_64x64=0x7f020016;
-        public static final int ic_game_80x80=0x7f020017;
-        public static final int ic_launcher=0x7f020018;
-        public static final int nikon_300x300=0x7f020019;
-        public static final int nikon_80x80=0x7f02001a;
-        public static final int shake_512x512=0x7f02001b;
-        public static final int shake_80x80=0x7f02001c;
-        public static final int shuffle_512x512=0x7f02001d;
-        public static final int shuffle_80x80=0x7f02001e;
-        public static final int shuffle_dark_80x80=0x7f02001f;
-        public static final int temp=0x7f020020;
-        public static final int xxx_512x512=0x7f020021;
-        public static final int xxx_80x80=0x7f020022;
-        public static final int xxx_dark_80x80=0x7f020023;
+        public static final int camera_512x512=0x7f020001;
+        public static final int camera_80x80=0x7f020002;
+        public static final int checkbox_empty_512x512=0x7f020003;
+        public static final int clock_80x80=0x7f020004;
+        public static final int dice_512x512=0x7f020005;
+        public static final int dice_80x80=0x7f020006;
+        public static final int dice_dark_512x512=0x7f020007;
+        public static final int dice_dark_80x80=0x7f020008;
+        public static final int ic_action_search=0x7f020009;
+        public static final int ic_game_128x128=0x7f02000a;
+        public static final int ic_game_32x32=0x7f02000b;
+        public static final int ic_game_48x48=0x7f02000c;
+        public static final int ic_game_512x512=0x7f02000d;
+        public static final int ic_game_64x64=0x7f02000e;
+        public static final int ic_game_80x80=0x7f02000f;
+        public static final int ic_launcher=0x7f020010;
+        public static final int shuffle_512x512=0x7f020011;
+        public static final int shuffle_80x80=0x7f020012;
+        public static final int shuffle_dark_80x80=0x7f020013;
+        public static final int xxx_512x512=0x7f020014;
+        public static final int xxx_80x80=0x7f020015;
+        public static final int xxx_dark_80x80=0x7f020016;
     }
     public static final class id {
         public static final int action_search=0x7f0b0012;
@@ -95,12 +82,10 @@ public final class R {
     public static final class layout {
         public static final int activity_items_list=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int activity_shake=0x7f030002;
     }
     public static final class menu {
         public static final int main_menu=0x7f0a0000;
         public static final int search_menu=0x7f0a0001;
-        public static final int shake=0x7f0a0002;
     }
     public static final class string {
         public static final int action_search=0x7f070006;

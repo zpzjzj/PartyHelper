@@ -19,7 +19,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:contentDescription="@string/shuffle_text"
-            android:drawableTop="@drawable/shake_80x80"
+            android:drawableTop="@drawable/dice_dark_80x80"
             android:gravity="center"
             android:text="@string/shuffle_text"
             android:textSize="20sp" />
@@ -63,7 +63,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:contentDescription="@string/puzzle_games"
-            android:drawableTop="@drawable/bulb_80x80"
+            android:drawableTop="@drawable/dice_dark_80x80"
             android:gravity="center"
             android:text="@string/puzzle_games"
             android:textSize="20sp" />
@@ -87,7 +87,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:contentDescription="@string/child_games"
-            android:drawableTop="@drawable/flower_80x80"
+            android:drawableTop="@drawable/dice_dark_80x80"
             android:gravity="center"
             android:text="@string/child_games"
             android:textSize="20sp" />
@@ -107,7 +107,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:contentDescription="@string/child_games"
-            android:drawableTop="@drawable/camera_dark_48x48"
+            android:drawableTop="@drawable/dice_dark_80x80"
             android:gravity="center"
             android:text="@string/child_games"
             android:textSize="20sp" />

@@ -4,6 +4,8 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="18" />
@@ -29,25 +31,27 @@
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
 
-            <!--
-                  meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" /
-            -->
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.clz.partyhelper.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.clz.partyhelper.SearchActivity"
-            android:label="@string/title_activity_search" >
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.clz.partyhelper.MainActivity" />
         </activity>
         <activity
             android:name="com.clz.partyhelper.ShakeActivity"
+            android:icon="@drawable/shake_48x48"
             android:label="@string/title_activity_shake" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.clz.partyhelper.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.clz.partyhelper.GameItemActivity"
+            android:label="@string/title_empty" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.clz.partyhelper.ItemsListActivity" />
         </activity>
     </application>
 

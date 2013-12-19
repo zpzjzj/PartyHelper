@@ -4,7 +4,6 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils.StringSplitter;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,6 +18,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private TextView puzzleGameView;
 	private TextView heavyGameView;
 	private TextView childGameView;
+	private TextView shuffleView;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		Log.d(LOG_TAG, "create main activity");
@@ -33,6 +33,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		heavyGameView.setOnClickListener(this);
 		childGameView = (TextView)findViewById(R.id.imgBtnType_3);
 		childGameView.setOnClickListener(this);
+		shuffleView = (TextView)findViewById(R.id.imgBtnShuffle);
+		shuffleView.setOnClickListener(this);
 	}
 
 	@Override
@@ -73,6 +75,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.imgBtnType_3:goTypeList((TextView)view);
 			break;
 		case R.id.imgBtnShuffle:
+			Intent intentShake = new Intent(this, ShakeActivity.class);
+			startActivity(intentShake);
 			break;
 		case R.id.imgBtnDice:
 			break;
@@ -87,12 +91,14 @@ public class MainActivity extends Activity implements OnClickListener {
 		Intent intent = new Intent(this, ItemsListActivity.class);
 		intent.putExtra(EXTRA_MESSAGE, message);
 		startActivity(intent);
+		//finish();
 	}
 	private void openSearch() {
-		String message = new String("全部类型");
+		String message = new String("鍏ㄩ儴绫诲瀷");
 		Intent intent = new Intent(this, ItemsListActivity.class);
 		intent.putExtra(EXTRA_MESSAGE, message);
-		startActivity(intent);		
+		startActivity(intent);	
+		//finish();
 	}
 
 	private void openSetting() {

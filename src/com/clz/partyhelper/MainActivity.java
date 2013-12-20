@@ -50,12 +50,8 @@ public class MainActivity extends Activity implements OnClickListener {
 	public boolean onOptionsItemSelected(MenuItem item){
 		Log.d(LOG_TAG, "options selected");
 		switch (item.getItemId()){
-		case R.id.action_search:
-
+		case R.id.action_search: 
 			openSearch();
-			return true;
-		case R.id.action_settings:
-			openSetting();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
@@ -92,25 +88,14 @@ public class MainActivity extends Activity implements OnClickListener {
 		Intent intent = new Intent(this, ItemsListActivity.class);
 		intent.putExtra(EXTRA_MESSAGE, message);
 		startActivity(intent);
-		//finish();
 	}
 	private void openSearch() {
-		String message = new String("全部类型");
+		/*actually do no search in MainActivity, jump to itemlistActivity*/
+		String message = this.getString(R.string.all_type);
+		
 		Intent intent = new Intent(this, ItemsListActivity.class);
 		intent.putExtra(EXTRA_MESSAGE, message);
 		startActivity(intent);	
-		//finish();
 	}
-
-	private void openSetting() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void sendMessage(View view){
-
-	}
-
-
 
 }

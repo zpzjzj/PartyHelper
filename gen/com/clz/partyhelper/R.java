@@ -76,8 +76,7 @@ public final class R {
     }
     public static final class id {
         public static final int action_favorite=0x7f0b001e;
-        public static final int action_search=0x7f0b0020;
-        public static final int action_settings=0x7f0b001f;
+        public static final int action_search=0x7f0b001f;
         public static final int action_share=0x7f0b001d;
         public static final int buttom_camera=0x7f0b000b;
         public static final int game_detail=0x7f0b000a;
@@ -99,8 +98,8 @@ public final class R {
         public static final int imgBtnType_3=0x7f0b0016;
         public static final int itemList=0x7f0b0010;
         public static final int items_list_spinner_layout=0x7f0b000c;
-        public static final int list_action_search=0x7f0b0022;
-        public static final int list_action_type=0x7f0b0021;
+        public static final int list_action_search=0x7f0b0021;
+        public static final int list_action_type=0x7f0b0020;
         public static final int list_age=0x7f0b001c;
         public static final int list_image=0x7f0b0017;
         public static final int list_item_title=0x7f0b0018;
@@ -128,31 +127,32 @@ public final class R {
         public static final int action_search=0x7f070007;
         public static final int action_settings=0x7f070004;
         public static final int action_share=0x7f070005;
-        public static final int adult_games=0x7f07000a;
+        public static final int adult_games=0x7f07000b;
+        public static final int all_type=0x7f070009;
         public static final int app_name=0x7f070000;
         public static final int button_send=0x7f070003;
-        public static final int child_games=0x7f07000b;
-        public static final int clock_text=0x7f070012;
-        public static final int content_img=0x7f070015;
-        public static final int content_img_btn=0x7f070014;
-        public static final int content_img_btn_clock=0x7f070013;
-        public static final int dice_text=0x7f070011;
+        public static final int child_games=0x7f07000c;
+        public static final int clock_text=0x7f070013;
+        public static final int content_img=0x7f070016;
+        public static final int content_img_btn=0x7f070015;
+        public static final int content_img_btn_clock=0x7f070014;
+        public static final int dice_text=0x7f070012;
         public static final int edit_message=0x7f070001;
         public static final int hello_world=0x7f070008;
-        public static final int label_age=0x7f07000d;
-        public static final int label_people_number=0x7f07000f;
-        public static final int label_place=0x7f07000e;
-        public static final int label_type=0x7f07000c;
-        public static final int puzzle_games=0x7f070009;
+        public static final int label_age=0x7f07000e;
+        public static final int label_people_number=0x7f070010;
+        public static final int label_place=0x7f07000f;
+        public static final int label_type=0x7f07000d;
+        public static final int puzzle_games=0x7f07000a;
         public static final int search_hint=0x7f070002;
-        public static final int shuffle_text=0x7f070010;
-        public static final int title_activity_game_item=0x7f070017;
-        public static final int title_activity_items_list=0x7f07001b;
-        public static final int title_activity_main=0x7f07001a;
-        public static final int title_activity_shake=0x7f070016;
-        public static final int title_empty=0x7f070019;
-        public static final int title_favorite=0x7f07001c;
-        public static final int title_sample=0x7f070018;
+        public static final int shuffle_text=0x7f070011;
+        public static final int title_activity_game_item=0x7f070018;
+        public static final int title_activity_items_list=0x7f07001c;
+        public static final int title_activity_main=0x7f07001b;
+        public static final int title_activity_shake=0x7f070017;
+        public static final int title_empty=0x7f07001a;
+        public static final int title_favorite=0x7f07001d;
+        public static final int title_sample=0x7f070019;
     }
     public static final class style {
         /** 

@@ -103,6 +103,8 @@ public class ItemsListActivity extends Activity{
 //			doMySearch(query);
 //		}
 	}
+	
+	/*start GameItemActivity*/
 	private void setUpGameItemActivity(Object item){
 		Intent intent = new Intent(this, GameItemActivity.class);
 		Bundle bundle = new Bundle();
@@ -117,14 +119,15 @@ public class ItemsListActivity extends Activity{
 		@Override
 		public void onItemClick(AdapterView<?> adapterView, View view, int position,
 				long id) {
-
 			Log.d(LOG_TAG, adapterView.getItemAtPosition(position).toString()); 
 			Log.d(LOG_TAG, "position: "+String.valueOf(position)+"id: "+String.valueOf(id));
+			
 			setUpGameItemActivity(adapterView.getItemAtPosition(position));
 		}
 		
 	};
 	private List<Map<String, Object>> getData(){
+		//TODO getData from database
 		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 		
 		Map<String, Object> map = new HashMap<String, Object>();
@@ -189,7 +192,7 @@ public class ItemsListActivity extends Activity{
 	
 	
 	public void doMySearch(String query){
-		
+		//TODO do search with sqlite
 	}
 	
 }

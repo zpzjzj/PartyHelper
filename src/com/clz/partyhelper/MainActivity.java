@@ -1,5 +1,7 @@
 package com.clz.partyhelper;
 
+import com.clz.partyhelper.auxiliary.Dice;
+
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
@@ -29,12 +31,19 @@ public class MainActivity extends Activity implements OnClickListener {
 		
 		puzzleGameView = (TextView)findViewById(R.id.imgBtnType_1);
 		puzzleGameView.setOnClickListener(this);
+		
 		heavyGameView = (TextView)findViewById(R.id.imgBtnType_2);
 		heavyGameView.setOnClickListener(this);
+		
 		childGameView = (TextView)findViewById(R.id.imgBtnType_3);
 		childGameView.setOnClickListener(this);
+		
 		shuffleView = (TextView)findViewById(R.id.imgBtnShuffle);
 		shuffleView.setOnClickListener(this);
+		
+		TextView diceView = (TextView)findViewById(R.id.imgBtnDice);
+		diceView.setOnClickListener(this);
+		
 	}
 
 	@Override
@@ -75,6 +84,8 @@ public class MainActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.imgBtnDice:
 			//TODO new a Intent to Dice
+			Intent intentDice = new Intent(this, Dice.class);
+			startActivity(intentDice);
 			break;
 		case R.id.imgBtnClock:
 			//TODO new a Intent to Clock

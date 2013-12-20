@@ -116,7 +116,8 @@
         android:layout_width="fill_parent"
         android:layout_height="50sp"
         android:gravity="center_horizontal"
-        android:orientation="horizontal" >
+        android:orientation="horizontal" 
+        android:background="@color/light_gray">
 
         <TextView
             android:id="@+id/buttom_camera"

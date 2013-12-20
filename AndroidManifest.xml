@@ -53,6 +53,40 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.clz.partyhelper.ItemsListActivity" />
         </activity>
+        <activity
+            android:name="com.clz.partyhelper.Dice"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.clz.partyhelper.MainInterface"
+            android:label="@string/title_activity_main_interface" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.clz.partyhelper.auxiliary.Picture"
+            android:label="@string/title_activity_picture" >
+        </activity>
+        <activity
+            android:name="com.clz.partyhelper.Draw_Path"
+            android:label="@string/title_activity_draw_path" >
+        </activity>
+        <activity
+            android:name="com.clz.partyhelper.auxiliary.MyDraw"
+            android:label="@string/title_activity_my_draw" >
+        </activity>
+        <activity
+            android:name="com.clz.partyhelper.auxiliary.ChronometerDemoActivity"
+            android:label="@string/title_activity_chronometer_demo" >
+        </activity>
+        <activity
+            android:name="com.clz.partyhelper.auxiliary.Dice"
+            android:label="@string/dice_text" 
+            android:icon="@drawable/dice_dark_48x48">
+        </activity>
     </application>
 
 </manifest>

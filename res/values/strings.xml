@@ -24,6 +24,8 @@
     <string name="label_people_number">适合人数:</string>
     <string name="label_start">开始</string>
     <string name="label_stop">停止</string>
+   <string name="label_set_time">设置时间:</string>
+   <string name="label_reset">重置</string>
     <!-- arrays -->
     <string-array name="array_type">
         <item>全部类型</item>
@@ -55,6 +57,7 @@
     <string name="shuffle_text">摇一摇</string>
     <string name="dice_text">掷骰子</string>
     <string name="clock_text">计时器</string>
+    <string name="draw_text">随手画</string>
     <string name="content_img_btn_clock">jump to the countdown clock</string>
     <string name="content_img_btn">a button with image</string>
     <string name="content_img">show a image</string>
@@ -66,9 +69,9 @@
     <string name="title_activity_items_list"></string>
     <string name="title_favorite">我的收藏</string>
     <!-- string name="app_name">辅助功能</string -->
-    <string name="title_activity_main_interface">MainInterface</string>
+    <string name="title_activity_main_interface">小工具</string>
     <string name="title_activity_picture">Picture</string>
-    <string name="title_activity_draw__path">Draw_Path</string>
+    <string name="title_activity_draw_path">Draw_Path</string>
     <string name="title_activity_my_draw">MyDraw</string>
     <string name="title_activity_chronometer_demo">ChronometerDemoActivity</string>
     <string name="webView_button">webview</string>

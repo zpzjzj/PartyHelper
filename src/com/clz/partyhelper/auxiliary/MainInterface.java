@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.TextView;
 
 import com.clz.partyhelper.R;
 
@@ -19,11 +19,11 @@ public class MainInterface extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_interface);
 		
-		Button btnDice = (Button) findViewById(R.id.btnDice);
+		TextView btnDice = (TextView) findViewById(R.id.btnDice);
 
-		Button btnPicture = (Button) findViewById(R.id.btnPicture);
+		TextView btnPicture = (TextView) findViewById(R.id.btnPicture);
 
-		Button btnTimer = (Button) findViewById(R.id.btnTimer);
+		TextView btnTimer = (TextView) findViewById(R.id.btnTimer);
 		
 		btnDice.setOnClickListener(new OnClickListener(){
 

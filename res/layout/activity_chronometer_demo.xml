@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-  	android:background="@drawable/back" 
-    android:gravity="center"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_horizontal_margin" >
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -15,52 +14,68 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="4"
+            android:layout_weight="1"
             android:gravity="center"
-            android:text="设置时间:" />
+            android:text="@string/label_set_time"
+            android:textSize="28sp" />
 
         <EditText
             android:id="@+id/edt_settime"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textSize="28sp" />
     </LinearLayout>
 
     <Chronometer
         android:id="@+id/chronometer"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1"
         android:gravity="center"
-        android:textColor="#ff0000"
-        android:textSize="60dip" />
+        android:textColor="@color/solid_blue"
+        android:textSize="120sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dip"
+        android:layout_height="100sp"
+        android:gravity="center"
         android:orientation="horizontal" >
 
-        <Button
+        <TextView
             android:id="@+id/btnStart"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="开始记时" />
+            android:background="@color/medium_gray"
+            android:gravity="center"
+            android:text="@string/label_start"
+            android:textSize="38sp"
+            android:textStyle="bold" />
 
-        <Button
+        <TextView
             android:id="@+id/btnStop"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="停止记时" />
+            android:background="@color/solid_blue"
+            android:gravity="center"
+            android:text="@string/label_stop"
+            android:textSize="38sp"
+            android:textStyle="bold" />
 
-        <Button
+        <TextView
             android:id="@+id/btnReset"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="重置" />
+            android:background="@color/medium_gray"
+            android:gravity="center"
+            android:text="@string/label_reset"
+            android:textSize="38sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </LinearLayout>

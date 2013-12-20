@@ -6,16 +6,16 @@ import android.os.Handler;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.clz.partyhelper.R;
 
 
 public class Dice extends Activity {
 	private ImageView imView;
-	private Button start;
-	private Button end;
+	private TextView start;
+	private TextView end;
 	private Handler handler;
 	private Runnable update;
 
@@ -91,7 +91,7 @@ public class Dice extends Activity {
 	}
 	private void getViews(){
 		imView=(ImageView) findViewById(R.id.dice_image_view);
-		start=(Button) findViewById(R.id.main_btn_start);
-		end=(Button) findViewById(R.id.main_btn_stop);
+		start=(TextView) findViewById(R.id.main_btn_start);
+		end=(TextView) findViewById(R.id.main_btn_stop);
 	}
 }

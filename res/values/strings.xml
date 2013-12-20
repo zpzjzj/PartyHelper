@@ -5,26 +5,35 @@
     <string name="edit_message">Enter a message</string>
     <string name="search_hint">请输入游戏名称</string>
     <string name="button_send">send</string>
+    <!-- actions -->
     <string name="action_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="menu_settings">Settings</string>
+    <string name="action_share">分享</string>
+    <string name="action_favorite">收藏</string>
     <string name="action_search">Search</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_items_list"></string>
-    <string name="title_activity_search">SearchActivity</string>
-    <string name="label_type">全部类型</string>
-
+    <!-- types -->
+    <string name="all_type">全部类型</string>
+    <string name="puzzle_games">益智类</string>
+    <string name="adult_games">重口味</string>
+    <string name="child_games">小清新</string>
+    <!-- labels -->
+    <string name="label_type">游戏类型:</string>
+    <string name="label_age">适合人群:</string>
+    <string name="label_place">适合场所:</string>
+    <string name="label_people_number">适合人数:</string>
+    <string name="label_start">开始</string>
+    <string name="label_stop">停止</string>
+   <string name="label_set_time">设置时间:</string>
+   <string name="label_reset">重置</string>
+   <string name="label_second">秒</string>
+    <!-- arrays -->
     <string-array name="array_type">
         <item>全部类型</item>
         <item>益智类</item>
         <item>重口味</item>
         <item>小清新</item>
     </string-array>
-
-    <string name="puzzle_games">益智类</string>
-    <string name="adult_games">重口味</string>
-    <string name="child_games">小清新</string>
-    <string name="label_age">适合人群:</string>
-
     <string-array name="array_age">
         <item>全部年龄</item>
         <item>0&#8211;10岁</item>
@@ -33,17 +42,11 @@
         <item>23&#8211;30岁</item>
         <item>30岁以上</item>
     </string-array>
-
-    <string name="label_place">所有场所</string>
-
     <string-array name="array_place">
         <item>所有场所</item>
         <item>室内</item>
         <item>户外</item>
     </string-array>
-
-    <string name="label_people_number">适合人数:</string>
-
     <string-array name="array_counts">
         <item>人数不限</item>
         <item>2人</item>
@@ -55,8 +58,24 @@
     <string name="shuffle_text">摇一摇</string>
     <string name="dice_text">掷骰子</string>
     <string name="clock_text">计时器</string>
+    <string name="draw_text">随手画</string>
     <string name="content_img_btn_clock">jump to the countdown clock</string>
     <string name="content_img_btn">a button with image</string>
-    <string name="title_activity_shake">ShakeActivity</string>
+    <string name="content_img">show a image</string>
+    <string name="title_activity_shake">摇一摇</string>
+    <string name="title_activity_game_item">GameItemActivity</string>
+    <string name="title_sample">游戏名称</string>
+    <string name="title_empty"></string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_items_list"></string>
+    <string name="title_favorite">我的收藏</string>
+    <!-- string name="app_name">辅助功能</string -->
+    <string name="title_activity_main_interface">小工具</string>
+    <string name="title_activity_picture">随手画</string>
+    <string name="title_activity_draw_path">Draw_Path</string>
+    <string name="title_activity_my_draw">MyDraw</string>
+    <string name="title_activity_chronometer_demo">计时器</string>
+    <string name="webView_button">webview</string>
+    <string name="draw_button">开始画图</string>
 
 </resources>

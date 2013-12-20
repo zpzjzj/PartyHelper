@@ -1,5 +1,11 @@
 package com.clz.partyhelper;
 
+<<<<<<< HEAD
+=======
+import com.clz.partyhelper.auxiliary.ChronometerDemoActivity;
+import com.clz.partyhelper.auxiliary.Dice;
+import com.clz.partyhelper.auxiliary.MainInterface;
+>>>>>>> ad43033734941806d39c079fad95b5623700b080
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -19,6 +25,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private TextView puzzleGameView;
 	private TextView heavyGameView;
 	private TextView childGameView;
+	private TextView shuffleView;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		Log.d(LOG_TAG, "create main activity");
@@ -29,10 +36,24 @@ public class MainActivity extends Activity implements OnClickListener {
 		
 		puzzleGameView = (TextView)findViewById(R.id.imgBtnType_1);
 		puzzleGameView.setOnClickListener(this);
+		
 		heavyGameView = (TextView)findViewById(R.id.imgBtnType_2);
 		heavyGameView.setOnClickListener(this);
+		
 		childGameView = (TextView)findViewById(R.id.imgBtnType_3);
 		childGameView.setOnClickListener(this);
+		
+		shuffleView = (TextView)findViewById(R.id.imgBtnShuffle);
+		shuffleView.setOnClickListener(this);
+		
+		TextView diceView = (TextView)findViewById(R.id.imgBtnDice);
+		diceView.setOnClickListener(this);
+		
+		TextView clockView = (TextView)findViewById(R.id.imgBtnClock);
+		clockView.setOnClickListener(this);	
+		
+		TextView toolView = (TextView)findViewById(R.id.image_button_tools);
+		toolView.setOnClickListener(this);
 	}
 
 	@Override
@@ -48,12 +69,8 @@ public class MainActivity extends Activity implements OnClickListener {
 	public boolean onOptionsItemSelected(MenuItem item){
 		Log.d(LOG_TAG, "options selected");
 		switch (item.getItemId()){
-		case R.id.action_search:
-
+		case R.id.action_search: 
 			openSearch();
-			return true;
-		case R.id.action_settings:
-			openSetting();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
@@ -62,7 +79,6 @@ public class MainActivity extends Activity implements OnClickListener {
 	
 	@Override
 	public void onClick(View view) {
-		// TODO Auto-generated method stub
 		Log.d(LOG_TAG, String.valueOf(((TextView)view).getText()));
 		
 		switch (view.getId()){
@@ -73,11 +89,20 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.imgBtnType_3:goTypeList((TextView)view);
 			break;
 		case R.id.imgBtnShuffle:
+			Intent intentShake = new Intent(this, ShakeActivity.class);
+			startActivity(intentShake);
 			break;
 		case R.id.imgBtnDice:
+			Intent intentDice = new Intent(this, Dice.class);
+			startActivity(intentDice);
 			break;
 		case R.id.imgBtnClock:
+			Intent intentClock = new Intent(this, ChronometerDemoActivity.class);
+			startActivity(intentClock);
 			break;
+		case R.id.image_button_tools:
+			Intent intentTools = new Intent(this, MainInterface.class);
+			startActivity(intentTools);
 			default:break;
 		}
 	}
@@ -89,21 +114,12 @@ public class MainActivity extends Activity implements OnClickListener {
 		startActivity(intent);
 	}
 	private void openSearch() {
-		String message = new String("全部类型");
+		/*actually do no search in MainActivity, jump to itemlistActivity*/
+		String message = this.getString(R.string.all_type);
+		
 		Intent intent = new Intent(this, ItemsListActivity.class);
 		intent.putExtra(EXTRA_MESSAGE, message);
-		startActivity(intent);		
+		startActivity(intent);	
 	}
-
-	private void openSetting() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void sendMessage(View view){
-
-	}
-
-
 
 }

@@ -16,6 +16,9 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -79,7 +82,8 @@ public class ItemsListActivity extends Activity{
         				new String[]{"title", "age", "people_number", "image"},
         				new int[]{R.id.list_item_title, R.id.list_age, R.id.list_people, R.id.list_image});    
         itemLists.setAdapter(adapterList);
-        
+        Log.d(LOG_TAG, "listView id :"+itemLists.toString());
+        itemLists.setOnItemClickListener(itemClickListener);
         //Uri uri = getIntent().getData();
 		//Cursor cursor=managedQuery(uri, null, null, null, null);
 		
@@ -100,7 +104,30 @@ public class ItemsListActivity extends Activity{
 //		}
 	}
 	
+	/*start GameItemActivity*/
+	private void setUpGameItemActivity(Object item){
+		Intent intent = new Intent(this, GameItemActivity.class);
+		Bundle bundle = new Bundle();
+		@SuppressWarnings("unchecked")
+		HashMap<String, Object> mapItem = (HashMap<String, Object>)item;
+		bundle.putSerializable("item", mapItem);
+		intent.putExtra("param", bundle);
+		startActivity(intent);
+	}
+	private OnItemClickListener itemClickListener = new OnItemClickListener(){
+
+		@Override
+		public void onItemClick(AdapterView<?> adapterView, View view, int position,
+				long id) {
+			Log.d(LOG_TAG, adapterView.getItemAtPosition(position).toString()); 
+			Log.d(LOG_TAG, "position: "+String.valueOf(position)+"id: "+String.valueOf(id));
+			
+			setUpGameItemActivity(adapterView.getItemAtPosition(position));
+		}
+		
+	};
 	private List<Map<String, Object>> getData(){
+		//TODO getData from database
 		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 		
 		Map<String, Object> map = new HashMap<String, Object>();
@@ -153,9 +180,11 @@ public class ItemsListActivity extends Activity{
 			doMySearch("this is a sql query");
 			onSearchRequested();
 			return true;
-		case android.R.id.home:
-			Intent intent = new Intent(this, MainActivity.class);
-			startActivity(intent);
+		case android.R.id.home:	
+			/*return to Main Activity, 
+			 * finish this
+			 * */
+			finish();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
@@ -163,7 +192,7 @@ public class ItemsListActivity extends Activity{
 	
 	
 	public void doMySearch(String query){
-		
+		//TODO do search with sqlite
 	}
 	
 }

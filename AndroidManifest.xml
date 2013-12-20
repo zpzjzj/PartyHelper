@@ -4,6 +4,8 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="18" />
@@ -29,25 +31,59 @@
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
 
-            <!--
-                  meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" /
-            -->
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.clz.partyhelper.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.clz.partyhelper.SearchActivity"
-            android:label="@string/title_activity_search" >
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.clz.partyhelper.MainActivity" />
         </activity>
         <activity
             android:name="com.clz.partyhelper.ShakeActivity"
+            android:icon="@drawable/shake_48x48"
             android:label="@string/title_activity_shake" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.clz.partyhelper.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.clz.partyhelper.GameItemActivity"
+            android:label="@string/title_empty" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.clz.partyhelper.ItemsListActivity" />
+        </activity>
+        <!-- auxiliary -->
+        <activity
+            android:name="com.clz.partyhelper.auxiliary.MainInterface"
+            android:label="@string/title_activity_main_interface" 
+            android:icon="@drawable/tools_48x48">
+<!--             <intent-filter> -->
+<!--                 <action android:name="android.intent.action.MAIN" /> -->
+
+<!--                 <category android:name="android.intent.category.LAUNCHER" /> -->
+<!--             </intent-filter> -->
+        </activity>
+        <activity
+            android:name="com.clz.partyhelper.auxiliary.Picture"
+            android:label="@string/title_activity_picture" >
+        </activity>
+        <activity
+            android:name="com.clz.partyhelper.Draw_Path"
+            android:label="@string/title_activity_draw_path" >
+        </activity>
+        <activity
+            android:name="com.clz.partyhelper.auxiliary.MyDraw"
+            android:label="@string/title_activity_my_draw" >
+        </activity>
+        <activity
+            android:name="com.clz.partyhelper.auxiliary.ChronometerDemoActivity"
+            android:label="@string/clock_text" >
+        </activity>
+        <activity
+            android:name="com.clz.partyhelper.auxiliary.Dice"
+            android:label="@string/dice_text" 
+            android:icon="@drawable/dice_dark_48x48">
         </activity>
     </application>
 

@@ -1,9 +1,14 @@
 package com.clz.partyhelper.game;
 
-//interface for the range
+/**
+ * integer range with min and max
+ * base class for AgeRange and PeopleNumRange
+ * @author zhaoping
+ *
+ */
 public class IntRange {
-	int min;
-	int max;
+	private int min;
+	private int max;
 	
 	IntRange(int min, int max){
 		this.min = min;

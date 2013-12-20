@@ -5,8 +5,8 @@ import com.clz.partyhelper.game.AgeRange.AgeLevel;
 import android.graphics.Bitmap;
 
 public class Game {
-	public enum Type{heavyTaste, fresh, puzzle, girlPreffered, boyPreffered} 
 	//don't mind the translation = =
+	public enum Type{heavyTaste, fresh, puzzle, girlPreffered, boyPreffered} 
 	public enum Place{indoor, outdoor};
 	
 	private long id;
@@ -72,5 +72,13 @@ public class Game {
 	}
 	public void setId(long id) {
 		this.id = id;
+	}
+	
+	//for debug
+	public String toString(){
+		return "name: " + name 
+				+ "\nage from " + ageRange.getMin() + " to " + ageRange.getMax() 
+				+ "\nnumber from " + peopleNumRange.getMin() + " to " + peopleNumRange.getMax()
+				+ "\ntype: " + type + " place: " + place;
 	}
 }

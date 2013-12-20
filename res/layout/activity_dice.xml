@@ -17,7 +17,7 @@
             android:layout_width="100dip"
             android:layout_height="100dip"
             android:contentDescription="@string/content_img"
-            android:src="@drawable/s1" />
+            android:src="@drawable/s3" />
     </LinearLayout>
 
     <LinearLayout

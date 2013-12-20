@@ -26,6 +26,7 @@
     <string name="label_stop">停止</string>
    <string name="label_set_time">设置时间:</string>
    <string name="label_reset">重置</string>
+   <string name="label_second">秒</string>
     <!-- arrays -->
     <string-array name="array_type">
         <item>全部类型</item>
@@ -70,10 +71,10 @@
     <string name="title_favorite">我的收藏</string>
     <!-- string name="app_name">辅助功能</string -->
     <string name="title_activity_main_interface">小工具</string>
-    <string name="title_activity_picture">Picture</string>
+    <string name="title_activity_picture">随手画</string>
     <string name="title_activity_draw_path">Draw_Path</string>
     <string name="title_activity_my_draw">MyDraw</string>
-    <string name="title_activity_chronometer_demo">ChronometerDemoActivity</string>
+    <string name="title_activity_chronometer_demo">计时器</string>
     <string name="webView_button">webview</string>
     <string name="draw_button">开始画图</string>
 

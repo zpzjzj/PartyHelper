@@ -28,9 +28,6 @@ public class MyDraw extends View {
 	public int moveState;
 
 
-
-
-
 	public MyDraw(Context context){
 		super(context);
 		// TODO Auto-generated constructor stub

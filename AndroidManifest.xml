@@ -53,18 +53,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.clz.partyhelper.ItemsListActivity" />
         </activity>
+        <!-- auxiliary -->
         <activity
-            android:name="com.clz.partyhelper.Dice"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name="com.clz.partyhelper.MainInterface"
-            android:label="@string/title_activity_main_interface" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name="com.clz.partyhelper.auxiliary.MainInterface"
+            android:label="@string/title_activity_main_interface" 
+            android:icon="@drawable/tools_48x48">
+<!--             <intent-filter> -->
+<!--                 <action android:name="android.intent.action.MAIN" /> -->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                 <category android:name="android.intent.category.LAUNCHER" /> -->
+<!--             </intent-filter> -->
         </activity>
         <activity
             android:name="com.clz.partyhelper.auxiliary.Picture"
@@ -80,7 +78,7 @@
         </activity>
         <activity
             android:name="com.clz.partyhelper.auxiliary.ChronometerDemoActivity"
-            android:label="@string/title_activity_chronometer_demo" >
+            android:label="@string/clock_text" >
         </activity>
         <activity
             android:name="com.clz.partyhelper.auxiliary.Dice"

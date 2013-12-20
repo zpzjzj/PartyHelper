@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.TextView;
 import android.widget.LinearLayout.LayoutParams;
 
 import com.clz.partyhelper.R;
@@ -18,8 +18,8 @@ public class Picture extends Activity {
 
 	private Draw_Path dPath;
 
-	Button draw_btn;//ѡ��ͼ�εİ�ť
-	Button btnRest;
+	TextView draw_btn;//ѡ��ͼ�εİ�ť
+	TextView btnRest;
 	
 	/* ����ÿ��view�Ĳ��ִ�С
 	 * This set of layout parameters defaults the width and the height 
@@ -36,23 +36,13 @@ public class Picture extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picture);
         
-        btnRest = (Button) findViewById(R.id.btnReset);
-        
-        draw_btn = (Button)findViewById(R.id.draw_button);
-        
-        draw_btn.setOnClickListener(new OnClickListener() {
-			public void onClick(View v) {
-				if(dPath == null){
-				dPath = new Draw_Path(getApplicationContext());
-				addContentView(dPath, lParams);
-				}
-				else{
-					dPath = null;
-					dPath = new Draw_Path(getApplicationContext());
-					addContentView(dPath, lParams);
-				}
-			}
-		});
+        btnRest = (TextView) findViewById(R.id.btn_draw_reset);
+                
+
+		dPath = new Draw_Path(getApplicationContext());
+		
+		//dPath.setBackgroundColor(this.getResources().getColor(R.color.dark_gray));
+		addContentView(dPath, lParams);
         
 		btnRest.setOnClickListener(new View.OnClickListener() {
 
@@ -69,12 +59,7 @@ public class Picture extends Activity {
 
 		});
         
-    }
-
-    
-    
-    
-    
+    }   
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -120,15 +120,27 @@
         android:background="@color/light_gray">
 
         <TextView
-            android:id="@+id/buttom_camera"
+            android:id="@+id/image_button_camera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:contentDescription="@string/child_games"
+            android:layout_marginRight="30dp"
+            android:contentDescription="@string/content_img"
             android:drawableTop="@drawable/camera_dark_48x48"
             android:gravity="center"
-            android:text="@string/child_games" />
+            />
+        <TextView
+            android:id="@+id/image_button_tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/content_img"
+            android:drawableTop="@drawable/tools_48x48"
+            android:gravity="center"
+            />
     </LinearLayout>
+    
+
 
 </LinearLayout>

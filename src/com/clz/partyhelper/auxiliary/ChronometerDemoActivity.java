@@ -35,7 +35,6 @@ public class ChronometerDemoActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
-				System.out.println("--��ʼ��ʱ---");
 				String ss = edtSetTime.getText().toString();
 				if (!(ss.equals("") && ss != null)) {
 					startTime = Integer.parseInt(edtSetTime.getText()
@@ -49,26 +48,23 @@ public class ChronometerDemoActivity extends Activity {
 			}
 		});
 
+		//stop the time
 		btnStop.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// ֹͣ
 				chronometer.stop();
 			}
 
 		});
 
-		// ����
+		//reset the time
 		btnRest.setOnClickListener(new View.OnClickListener() {
-			@Override
 			public void onClick(View v) {
 				chronometer.setBase(SystemClock.elapsedRealtime());
-
 			}
-
 		});
-		chronometer
-				.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
+		chronometer.setOnChronometerTickListener(
+				new Chronometer.OnChronometerTickListener() {
 					@Override
 					public void onChronometerTick(Chronometer chronometer) {
 						// ���ʼ��ʱ�����ڳ�����startime��

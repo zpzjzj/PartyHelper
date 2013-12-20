@@ -1,6 +1,8 @@
 package com.clz.partyhelper;
 
+import com.clz.partyhelper.auxiliary.ChronometerDemoActivity;
 import com.clz.partyhelper.auxiliary.Dice;
+import com.clz.partyhelper.auxiliary.MainInterface;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -44,6 +46,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		TextView diceView = (TextView)findViewById(R.id.imgBtnDice);
 		diceView.setOnClickListener(this);
 		
+		TextView clockView = (TextView)findViewById(R.id.imgBtnClock);
+		clockView.setOnClickListener(this);	
+		
+		TextView toolView = (TextView)findViewById(R.id.image_button_tools);
+		toolView.setOnClickListener(this);
 	}
 
 	@Override
@@ -83,13 +90,16 @@ public class MainActivity extends Activity implements OnClickListener {
 			startActivity(intentShake);
 			break;
 		case R.id.imgBtnDice:
-			//TODO new a Intent to Dice
 			Intent intentDice = new Intent(this, Dice.class);
 			startActivity(intentDice);
 			break;
 		case R.id.imgBtnClock:
-			//TODO new a Intent to Clock
+			Intent intentClock = new Intent(this, ChronometerDemoActivity.class);
+			startActivity(intentClock);
 			break;
+		case R.id.image_button_tools:
+			Intent intentTools = new Intent(this, MainInterface.class);
+			startActivity(intentTools);
 			default:break;
 		}
 	}

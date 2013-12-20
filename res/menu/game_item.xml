@@ -13,10 +13,4 @@
 	    android:icon="@drawable/action_favorite_un_48x48"
 	    android:title="@string/action_favorite"
 	    android:showAsAction="ifRoom"/>
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_settings"/>
-
 </menu>

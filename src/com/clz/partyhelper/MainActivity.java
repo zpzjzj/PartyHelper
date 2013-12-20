@@ -64,7 +64,6 @@ public class MainActivity extends Activity implements OnClickListener {
 	
 	@Override
 	public void onClick(View view) {
-		// TODO Auto-generated method stub
 		Log.d(LOG_TAG, String.valueOf(((TextView)view).getText()));
 		
 		switch (view.getId()){
@@ -79,8 +78,10 @@ public class MainActivity extends Activity implements OnClickListener {
 			startActivity(intentShake);
 			break;
 		case R.id.imgBtnDice:
+			//TODO new a Intent to Dice
 			break;
 		case R.id.imgBtnClock:
+			//TODO new a Intent to Clock
 			break;
 			default:break;
 		}

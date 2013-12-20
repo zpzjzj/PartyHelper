@@ -18,14 +18,18 @@ public class GameItemActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_game_item);
 		
+		/*enable home button in ActionBar*/
 		ActionBar actionBar = getActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		
+		/*get the bundle from the selected item 
+		 * transferred by ItemsListActivity
+		 */
 		Intent intent = getIntent();
 		Bundle bundle = intent.getBundleExtra("param");
 		@SuppressWarnings("unchecked")
 		HashMap<String, Object> mapItem = (HashMap<String, Object>) bundle.getSerializable("item");
-		
+		/*title from mapItem*/
 		TextView title = (TextView) findViewById(R.id.game_item_title);
 		title.setText((CharSequence) mapItem.get("title"));
 	}

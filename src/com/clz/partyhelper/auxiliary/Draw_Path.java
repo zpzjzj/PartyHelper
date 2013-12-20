@@ -1,4 +1,4 @@
-package com.example.saizi;
+package com.clz.partyhelper.auxiliary;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -17,7 +17,7 @@ public class Draw_Path extends MyDraw {
 	public Draw_Path(Context context){
 		super(context);
 		// TODO Auto-generated constructor stub
-		//ÊµÀý»¯
+		//Êµï¿½ï¿½
 		mPath = new Path();
 		
 	}

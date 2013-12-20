@@ -1,4 +1,4 @@
-package com.example.saizi;
+package com.clz.partyhelper.auxiliary;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -11,19 +11,19 @@ import android.util.Log;
 import android.view.View;
 
 /*
- * Ö÷view
- * ÆäËû»­Í¼¹¤¾ßviewÀà¶¼¼Ì³ĞÁËÖ÷view
+ * ï¿½ï¿½view
+ * ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½viewï¿½à¶¼ï¿½Ì³ï¿½ï¿½ï¿½ï¿½ï¿½view
  * 
- * ÔÚÖ÷viewÀàÖĞ¶¨ÒåÁËÍ³Ò»µÄpaint¡¢bitmap¡¢canvas
- * ÒÔ¼°×ÓÀàÖĞĞèÒªÓÃµ½µÄ3¸öµãdownPoint,movePoint,upPoint
+ * ï¿½ï¿½ï¿½ï¿½viewï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½Í³Ò»ï¿½ï¿½paintï¿½ï¿½bitmapï¿½ï¿½canvas
+ * ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ãµï¿½ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½downPoint,movePoint,upPoint
  * 
  */
 public class MyDraw extends View {
 	
-	//publicÀàĞÍ£¬×ÓÀàĞèÒªÓÃµ½
+	//publicï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ãµï¿½
 	public Point downPoint,movePoint,upPoint;
-	public Paint paint;//ÉùÃ÷»­±Ê
-	public Canvas canvas;//»­²¼
+	public Paint paint;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	public Canvas canvas;//ï¿½ï¿½ï¿½ï¿½
 	public Bitmap bitmap;//Î»Í¼
 	public int downState;
 	public int moveState;
@@ -36,15 +36,15 @@ public class MyDraw extends View {
 		super(context);
 		// TODO Auto-generated constructor stub
 		
-		  paint=new Paint(Paint.DITHER_FLAG);//´´½¨Ò»¸ö»­±Ê
-		  bitmap = Bitmap.createBitmap(480, 700, Bitmap.Config.ARGB_8888); //ÉèÖÃÎ»Í¼µÄ¿í¸ß
+		  paint=new Paint(Paint.DITHER_FLAG);//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		  bitmap = Bitmap.createBitmap(480, 700, Bitmap.Config.ARGB_8888); //ï¿½ï¿½ï¿½ï¿½Î»Í¼ï¿½Ä¿ï¿½ï¿½
 		  canvas=new Canvas(bitmap);
 		  
-		  //ÉèÖÃ»­±Ê
-		  paint.setStyle(Style.STROKE);//ÉèÖÃ·ÇÌî³ä
-		  paint.setStrokeWidth(5);//±Ê¿í5ÏñËØ
-		  paint.setColor(Color.RED);//ÉèÖÃÎªºì±Ê
-		  paint.setAntiAlias(true);//¾â³İ²»ÏÔÊ¾
+		  //ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½
+		  paint.setStyle(Style.STROKE);//ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½
+		  paint.setStrokeWidth(5);//ï¿½Ê¿ï¿½5ï¿½ï¿½ï¿½ï¿½
+		  paint.setColor(Color.RED);//ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½
+		  paint.setAntiAlias(true);//ï¿½ï¿½İ²ï¿½ï¿½ï¿½Ê¾
 		  
 		  downPoint = new Point();
 		  movePoint = new Point();

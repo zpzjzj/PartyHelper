@@ -1,30 +1,31 @@
-package com.example.saizi;
+package com.clz.partyhelper.auxiliary;
 
-import com.example.saizi.Draw_Path;
-import com.example.saizi.R;
 
-import android.os.Bundle;
+
 import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout.LayoutParams;
 
+import com.clz.partyhelper.R;
+
 public class Picture extends Activity {
 
 	private Draw_Path dPath;
 
-	Button draw_btn;//Ñ¡ÔñÍ¼ÐÎµÄ°´Å¥
+	Button draw_btn;//Ñ¡ï¿½ï¿½Í¼ï¿½ÎµÄ°ï¿½Å¥
 	Button btnRest;
 	
-	/* ÉèÖÃÃ¿¸öviewµÄ²¼¾Ö´óÐ¡
+	/* ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½viewï¿½Ä²ï¿½ï¿½Ö´ï¿½Ð¡
 	 * This set of layout parameters defaults the width and the height 
 	 * 
-	 * LayoutParams.MATCH_PARENTºÍxmlÖÐ¶¨Òå¿Ø¼þ´óÐ¡µÄmatch_parentÊôÐÔÒ»Ñù
-	 * height£ºÉèÖÃÎª700£¬Èç¹ûÉèÖÃÎªmatch_parent¡¢wrap_contentÔòview»­Õ¼ÂúÈ«ÆÁµ²×¡draw_btn°´Å¥¿Ø¼þ
+	 * LayoutParams.MATCH_PARENTï¿½ï¿½xmlï¿½Ð¶ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½match_parentï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+	 * heightï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª700ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªmatch_parentï¿½ï¿½wrap_contentï¿½ï¿½viewï¿½ï¿½Õ¼ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½×¡draw_btnï¿½ï¿½Å¥ï¿½Ø¼ï¿½
 	 */
 	LayoutParams lParams = new LayoutParams(LayoutParams.MATCH_PARENT, 580);
 	

@@ -1,6 +1,4 @@
-package com.example.saizi;
-
-import java.util.Random;
+package com.clz.partyhelper.auxiliary;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -11,7 +9,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.saizi.R.id;
+import com.clz.partyhelper.R;
+
 
 public class Dice extends Activity {
 	private ImageView imView;
@@ -91,8 +90,8 @@ public class Dice extends Activity {
 		return true;
 	}
 	private void getViews(){
-		imView=(ImageView) findViewById(id.imageView1);
-		start=(Button) findViewById(id.main_btn_start);
-		end=(Button) findViewById(id.main_btn_stop);
+		imView=(ImageView) findViewById(R.id.dice_image_view);
+		start=(Button) findViewById(R.id.main_btn_start);
+		end=(Button) findViewById(R.id.main_btn_stop);
 	}
 }

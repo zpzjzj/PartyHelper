@@ -1,4 +1,6 @@
-package com.example.saizi;
+package com.clz.partyhelper.auxiliary;
+
+import com.clz.partyhelper.R;
 
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -34,15 +36,15 @@ public class ChronometerDemoActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
-				System.out.println("--¿ªÊ¼¼ÇÊ±---");
+				System.out.println("--ï¿½ï¿½Ê¼ï¿½ï¿½Ê±---");
 				String ss = edtSetTime.getText().toString();
 				if (!(ss.equals("") && ss != null)) {
 					startTime = Integer.parseInt(edtSetTime.getText()
 							.toString());
 				}
-				// ÉèÖÃ¿ªÊ¼½²Ê±Ê±¼ä
+				// ï¿½ï¿½ï¿½Ã¿ï¿½Ê¼ï¿½ï¿½Ê±Ê±ï¿½ï¿½
 				chronometer.setBase(SystemClock.elapsedRealtime());
-				// ¿ªÊ¼¼ÇÊ±
+				// ï¿½ï¿½Ê¼ï¿½ï¿½Ê±
 				chronometer.start();
 
 			}
@@ -57,7 +59,7 @@ public class ChronometerDemoActivity extends Activity {
 
 		});
 
-		// ÖØÖÃ
+		// ï¿½ï¿½ï¿½ï¿½
 		btnRest.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -70,11 +72,11 @@ public class ChronometerDemoActivity extends Activity {
 				.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
 					@Override
 					public void onChronometerTick(Chronometer chronometer) {
-						// Èç¹û¿ªÊ¼¼ÆÊ±µ½ÏÖÔÚ³¬¹ýÁËstartimeÃë
+						// ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ú³ï¿½ï¿½ï¿½ï¿½ï¿½startimeï¿½ï¿½
 						if (SystemClock.elapsedRealtime()
 								- chronometer.getBase() > startTime * 1000) {
 							chronometer.stop();
-							// ¸øÓÃ»§ÌáÊ¾
+							// ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ê¾
 							showDialog();
 						}
 					}
@@ -84,8 +86,8 @@ public class ChronometerDemoActivity extends Activity {
 	protected void showDialog() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 builder.setIcon(R.drawable.eb28d25);
-		builder.setTitle("¾¯¸æ").setMessage("Ê±¼äµ½")
-				.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener() {
+		builder.setTitle("ï¿½ï¿½ï¿½ï¿½").setMessage("Ê±ï¿½äµ½")
+				.setPositiveButton("È·ï¿½ï¿½", new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 					}

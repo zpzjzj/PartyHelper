@@ -7,6 +7,7 @@
     <string name="button_send">send</string>
     <!-- actions -->
     <string name="action_settings">Settings</string>
+    <string name="menu_settings">Settings</string>
     <string name="action_share">分享</string>
     <string name="action_favorite">收藏</string>
     <string name="action_search">Search</string>
@@ -21,7 +22,9 @@
     <string name="label_age">适合人群:</string>
     <string name="label_place">适合场所:</string>
     <string name="label_people_number">适合人数:</string>
-<!-- arrays -->
+    <string name="label_start">开始</string>
+    <string name="label_stop">停止</string>
+    <!-- arrays -->
     <string-array name="array_type">
         <item>全部类型</item>
         <item>益智类</item>
@@ -62,7 +65,7 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_items_list"></string>
     <string name="title_favorite">我的收藏</string>
-    <!--  string name="app_name">辅助功能</string-->
+    <!-- string name="app_name">辅助功能</string -->
     <string name="title_activity_main_interface">MainInterface</string>
     <string name="title_activity_picture">Picture</string>
     <string name="title_activity_draw__path">Draw_Path</string>

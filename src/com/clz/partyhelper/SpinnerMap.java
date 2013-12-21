@@ -2,7 +2,6 @@ package com.clz.partyhelper;
 import com.clz.partyhelper.game.AgeRange;
 import com.clz.partyhelper.game.AgeRange.AgeLevel;
 import com.clz.partyhelper.game.Game.Place;
-import com.clz.partyhelper.game.Game.Type;
 import com.clz.partyhelper.game.PeopleNumRange;
 /*
  * manage all the spinner items 

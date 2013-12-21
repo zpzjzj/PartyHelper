@@ -16,8 +16,6 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.clz.partyhelper.auxiliary.ChronometerDemoActivity;
-import com.clz.partyhelper.auxiliary.Dice;
 import com.clz.partyhelper.auxiliary.MainInterface;
 import com.clz.partyhelper.game.Game;
 import com.clz.partyhelper.game.Game.Place;

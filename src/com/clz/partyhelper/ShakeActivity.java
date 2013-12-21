@@ -1,8 +1,7 @@
 package com.clz.partyhelper;
 
 import java.util.HashMap;
-import java.util.Map;
-
+import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
@@ -17,11 +16,10 @@ import android.os.Vibrator;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
-
 import com.clz.partyhelper.game.Game;
 import com.clz.partyhelper.game.GamesDataSource;
 
+@SuppressLint("HandlerLeak")
 public class ShakeActivity extends Activity {
 	private static final String LOG_TAG="ShakeActivity";
 	private static final int SENSOR_SHAKE = 10;
@@ -80,13 +78,11 @@ public class ShakeActivity extends Activity {
 
 		@Override
 		public void onAccuracyChanged(Sensor sensor, int accuracy) {
-			// TODO Auto-generated method stub
 			
 		}
 
 		@Override
-		public void onSensorChanged(SensorEvent event) {
-			// TODO Auto-generated method stub
+		public void onSensorChanged(SensorEvent event) {			
 			float[] values = event.values;
 			float x = values[0]; // x, right +, left -
 			float y = values[1]; // y, front +, back -

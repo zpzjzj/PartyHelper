@@ -25,17 +25,18 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.SearchView.OnQueryTextListener;
 import android.widget.SimpleAdapter;
 import android.widget.SimpleAdapter.ViewBinder;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.clz.partyhelper.game.Game;
 import com.clz.partyhelper.game.AgeRange;
-import com.clz.partyhelper.game.Game.Type;
-import com.clz.partyhelper.game.PeopleNumRange;
+import com.clz.partyhelper.game.Game;
 import com.clz.partyhelper.game.Game.Place;
+import com.clz.partyhelper.game.Game.Type;
 import com.clz.partyhelper.game.GamesDataSource;
+import com.clz.partyhelper.game.PeopleNumRange;
 
 public class ItemsListActivity extends Activity{
 	private static String LOG_TAG="ItemsListActivity";
@@ -299,23 +300,38 @@ public class ItemsListActivity extends Activity{
 		SearchManager searchManager = (SearchManager)getSystemService(Context.SEARCH_SERVICE);
 		searchView = (SearchView)menu.findItem(R.id.list_action_search).getActionView();
 		searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+		
+		searchView.setOnQueryTextListener(new OnQueryTextListener(){
 
+			@Override
+			public boolean onQueryTextChange(String newText) {
+				// TODO add search suggestion
+				return false;
+			}
+
+			@Override
+			public boolean onQueryTextSubmit(String query) {
+				// TODO Auto-generated method stub
+				Log.d("handle", "ACTION QUERY TEXT SUBMIT" + query);
+
+				listGames(query, null, null, null, null, null, null);
+				return false;
+			}
+			
+		});
 		typeView = (TextView)menu.findItem(R.id.list_action_type).getActionView();
 		typeView.setGravity(Gravity.CENTER);
 		typeView.setWidth(300);
 		typeView.setTextSize(20);
 		typeView.setText(typeMsg);
 
-		query = getIntent().getStringExtra(SearchManager.QUERY);
-		Log.d("handle", "ACTION_SEARCH:"+ query);
-		listGames(query, null, null, null, null, null, null);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch(item.getItemId()) {
-		case R.id.list_action_search:	
+		case R.id.list_action_search:
 			return true;
 		case android.R.id.home:	
 			/*return to Main Activity, 

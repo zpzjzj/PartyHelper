@@ -16,7 +16,7 @@ public class Game {
 	private PeopleNumRange peopleNumRange = new PeopleNumRange(PeopleNumRange.MIN_NUM, PeopleNumRange.MAX_NUM);
 	private Type type = Type.puzzle;
 	private Place place = Place.indoor;
-	private Object picture;
+
 	private String detail = "empty";
 	
 	public String getName() {
@@ -49,12 +49,8 @@ public class Game {
 	public void setPlace(Place place) {
 		this.place = place;
 	}
-	public Object getPicture() {
-		return picture;
-	}
-	public void setPicture(Object picture) {
-		this.picture = picture;
-	}
+
+
 	public String getDetail() {
 		return detail;
 	}

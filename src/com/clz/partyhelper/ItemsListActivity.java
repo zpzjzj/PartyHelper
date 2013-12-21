@@ -10,6 +10,7 @@ import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -26,10 +27,14 @@ import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.clz.partyhelper.game.Game;
+import com.clz.partyhelper.game.GamesDataSource;
+
 public class ItemsListActivity extends Activity{
 	private static String LOG_TAG="ItemsListActivity";
 	
 	private TextView typeView;	
+	private ListView itemLists;
 	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
@@ -66,42 +71,9 @@ public class ItemsListActivity extends Activity{
         adapterCount.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCounts.setAdapter(adapterCount);
         
-        String[] fromColumns = new String[3];
-        int[] toViews = new int[3];
-        for (int i=0; i<3; i++){
-        	fromColumns[i] = new String("item " + i);
-        	toViews[i] = i;
-        }
-        
-        ListView itemLists = (ListView)findViewById(R.id.itemList);
-        SimpleAdapter adapterList = 
-        		new SimpleAdapter(
-        				this, 
-        				getData(),
-        				R.xml.search_list,
-        				new String[]{"title", "age", "people_number", "image"},
-        				new int[]{R.id.list_item_title, R.id.list_age, R.id.list_people, R.id.list_image});    
-        itemLists.setAdapter(adapterList);
-        Log.d(LOG_TAG, "listView id :"+itemLists.toString());
-        itemLists.setOnItemClickListener(itemClickListener);
-        //Uri uri = getIntent().getData();
-		//Cursor cursor=managedQuery(uri, null, null, null, null);
-		
-//		if (cursor == null){
-//			finish();
-//		} else {
-//			//fetch data from the database
-//			cursor.moveToFirst();
-//			ImageView image = new ImageView(null);
-//			image.setImageResource(R.drawable.ic_game_128x128);
-//			
-//			TextView name = new TextView(null);
-//			name.setText("Game X");
-//		}
-//		if (Intent.ACTION_SEARCH.equals((intent.getAction()))){
-//			String query = intent.getStringExtra(SearchManager.QUERY);
-//			doMySearch(query);
-//		}
+        itemLists = (ListView)findViewById(R.id.itemList);   
+        Log.d(LOG_TAG, "before add data height" + itemLists.getHeight());
+        listAllGames();
 	}
 	
 	/*start GameItemActivity*/
@@ -119,37 +91,56 @@ public class ItemsListActivity extends Activity{
 		@Override
 		public void onItemClick(AdapterView<?> adapterView, View view, int position,
 				long id) {
-			Log.d(LOG_TAG, adapterView.getItemAtPosition(position).toString()); 
-			Log.d(LOG_TAG, "position: "+String.valueOf(position)+"id: "+String.valueOf(id));
+			//Log.d(LOG_TAG, adapterView.getItemAtPosition(position).toString()); 
+			//Log.d(LOG_TAG, "position: "+String.valueOf(position)+"id: "+String.valueOf(id));
 			
 			setUpGameItemActivity(adapterView.getItemAtPosition(position));
 		}
 		
 	};
+	
+	/*
+	 * list all games with com.clz.partyhelper.game
+	 */
+	private void listAllGames(){
+
+        SimpleAdapter adapterList = 
+        		new SimpleAdapter(
+        				this, 
+        				getData(),
+        				R.xml.search_list,
+        				new String[]{"name", "age", "people_number", "image"},
+        				new int[]{R.id.list_item_title, R.id.list_age, R.id.list_people, R.id.list_image});    
+        itemLists.setAdapter(adapterList);
+        
+        Log.d(LOG_TAG, "listView id :"+itemLists.toString() + "height" + itemLists.getHeight());
+        itemLists.setOnItemClickListener(itemClickListener);
+        
+	}
 	private List<Map<String, Object>> getData(){
 		//TODO getData from database
 		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+		Map<String, Object> map = null;
 		
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("title", "Game 1");
-		map.put("age", "child");
-		map.put("people_number", "5");
-		map.put("image", R.drawable.ic_game_64x64);
-		list.add(map);
+//		map = new HashMap<String, Object>();
+//		map.put("name", "Game1");
+//		map.put("age", "2-5");
+//		map.put("people_number", "20-30");
+//		map.put("image", R.drawable.game_pic1);
+//		list.add(map);
 		
-		map = new HashMap<String, Object>();
-		map.put("title", "Game 2");
-		map.put("age", "young");
-		map.put("people_number", "20");
-		map.put("image", R.drawable.ic_game_64x64);
-		list.add(map);
-		
-		map = new HashMap<String, Object>();
-		map.put("title", "Game 3");
-		map.put("age", "2-20");
-		map.put("people_number", "25");
-		map.put("image", R.drawable.ic_game_64x64);
-		list.add(map);
+		GamesDataSource gameSource = new GamesDataSource(this);
+		gameSource.open();
+		List<Game> listGame = gameSource.getAllGames();
+		for(Game game: listGame){
+			Log.d(LOG_TAG, game.toString());
+			map = new HashMap<String, Object>();
+			map.put("name", game.getName());
+			map.put("age", game.getAgeRange().toString());
+			map.put("people_number", game.getPeopleNumRange().toString());
+			map.put("image", game.getImg());
+			list.add(map);
+		}
 		return list;
 	}
 	@Override
@@ -157,7 +148,7 @@ public class ItemsListActivity extends Activity{
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.search_menu, menu);
 		
-		Log.d(LOG_TAG, "create the list action bar");
+		//Log.d(LOG_TAG, "create the list action bar");
 		SearchManager searchManager = (SearchManager)getSystemService(Context.SEARCH_SERVICE);
 		SearchView searchView = (SearchView)menu.findItem(R.id.list_action_search).getActionView();
 		searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
@@ -176,9 +167,9 @@ public class ItemsListActivity extends Activity{
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch(item.getItemId()) {
-		case R.id.action_search:
+		case R.id.list_action_search:
 			doMySearch("this is a sql query");
-			onSearchRequested();
+			Log.d(LOG_TAG, "Search selected");
 			return true;
 		case android.R.id.home:	
 			/*return to Main Activity, 
@@ -193,6 +184,18 @@ public class ItemsListActivity extends Activity{
 	
 	public void doMySearch(String query){
 		//TODO do search with sqlite
+		GamesDataSource gameSource = new GamesDataSource(this);
+		gameSource.open();
+		Log.d(LOG_TAG, "GamesDataSource created");
+//		Game game = gameSource.randomPick();
+//		Log.d(LOG_TAG, game.toString());
+//		List<Game> games = gameSource.getGames(null, null, null, null, null, null, Game.Place.indoor);
+		List<Game> games = gameSource.getAllGames();
+		for(Game game: games){
+			Log.d(LOG_TAG, game.toString());
+		}
+
+        
 	}
 	
 }

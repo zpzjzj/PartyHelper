@@ -49,9 +49,6 @@
         <activity
             android:name="com.clz.partyhelper.GameItemActivity"
             android:label="@string/title_empty" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.clz.partyhelper.ItemsListActivity" />
         </activity>
         <!-- auxiliary -->
         <activity

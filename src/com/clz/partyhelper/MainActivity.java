@@ -1,11 +1,9 @@
 package com.clz.partyhelper;
 
-<<<<<<< HEAD
-=======
+
 import com.clz.partyhelper.auxiliary.ChronometerDemoActivity;
 import com.clz.partyhelper.auxiliary.Dice;
 import com.clz.partyhelper.auxiliary.MainInterface;
->>>>>>> ad43033734941806d39c079fad95b5623700b080
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -18,7 +16,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
-
+/*
+ * main activity
+ */
 public class MainActivity extends Activity implements OnClickListener {
 	public final static String EXTRA_MESSAGE = "com.clz.partyhelper.MESSAGE";
 	private final static String LOG_TAG = "MainActivity";

@@ -26,5 +26,13 @@ public class IntRange {
 	public boolean withInRange(IntRange other){
 		return other.getMin() >= getMin() && other.getMax() <= getMax(); 
 	}
+	
+	/*add by CHEN*/
+	@Override
+	public String toString(){
+		String str = new String();
+		str = String.valueOf(min)+ " - " + String.valueOf(max);
+		return str;
+	}
 }
 

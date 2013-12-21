@@ -17,6 +17,12 @@
     <string name="puzzle_games">益智类</string>
     <string name="adult_games">重口味</string>
     <string name="child_games">小清新</string>
+    <string name="boyPreffered">纯爷们</string>
+    <string name="girlPreffered">萌妹子</string>
+    <!-- place -->
+    <string name="all_place">场所不限</string>
+    <string name="indoor">室内</string>
+    <string name="outdoor">户外</string>
     <!-- labels -->
     <string name="label_type">游戏类型:</string>
     <string name="label_age">适合年龄:</string>

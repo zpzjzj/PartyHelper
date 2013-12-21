@@ -130,10 +130,10 @@ public class GamesDataSource {
 			String defaultStr = new String("");
 			HashMap<Object, String> map = new HashMap<Object, String>(); 
 			map.put(name, SQLHelper.COLUMN_NAME + " LIKE '%" + (name != null ?name + "%'": defaultStr));
-			map.put(minAge, SQLHelper.COLUMN_MIN_AGE + " >= " + (minAge != null ? minAge.toString(): defaultStr));
-			map.put(maxAge, SQLHelper.COLUMN_MAX_AGE + " <= " + (maxAge != null ? maxAge.toString(): defaultStr));
-			map.put(minNum, SQLHelper.COLUMN_MIN_PEOPLE_NUM + " >= " + (minNum != null ? minNum.toString(): defaultStr));
-			map.put(minNum, SQLHelper.COLUMN_MAX_PEOPLE_NUM + " <= " + (maxNum != null ? maxNum.toString(): defaultStr));
+			map.put(minAge, SQLHelper.COLUMN_MIN_AGE + " <= " + (minAge != null ? minAge.toString(): defaultStr));
+			map.put(maxAge, SQLHelper.COLUMN_MAX_AGE + " >= " + (maxAge != null ? maxAge.toString(): defaultStr));
+			map.put(minNum, SQLHelper.COLUMN_MIN_PEOPLE_NUM + " <= " + (minNum != null ? minNum.toString(): defaultStr));
+			map.put(maxNum, SQLHelper.COLUMN_MAX_PEOPLE_NUM + " >= " + (maxNum != null ? maxNum.toString(): defaultStr));
 			map.put(type, SQLHelper.COLUMN_TYPE + " == " + (type != null ? Integer.toString(type.ordinal()): defaultStr));
 			map.put(place, SQLHelper.COLUMN_PLACE + " == " + (place != null ? Integer.toString(place.ordinal()): defaultStr));	
 		

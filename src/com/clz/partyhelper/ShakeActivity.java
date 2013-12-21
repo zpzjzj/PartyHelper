@@ -1,7 +1,11 @@
 package com.clz.partyhelper;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -14,6 +18,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.clz.partyhelper.game.Game;
+import com.clz.partyhelper.game.GamesDataSource;
 
 public class ShakeActivity extends Activity {
 	private static final String LOG_TAG="ShakeActivity";
@@ -50,7 +57,21 @@ public class ShakeActivity extends Activity {
 
 	/*randomly pick a game*/
 	private void pickGame(){
-		Toast.makeText(ShakeActivity.this, "Shake detected!", Toast.LENGTH_SHORT).show();
+		GamesDataSource gameSource = new GamesDataSource(this);
+		gameSource.open();
+		Game game = gameSource.randomPick();
+		gameSource.close();
+		
+		Intent intent = new Intent(this, GameItemActivity.class);
+		Bundle bundle = new Bundle();
+
+		HashMap<String, Object> mapItem = new HashMap<String, Object>();
+		mapItem.put("name", game.getName());
+		bundle.putSerializable("item", mapItem);
+		intent.putExtra("param", bundle);
+		startActivity(intent);
+		finish();
+		
 		Log.i(LOG_TAG, "Shake detected!");
 	}
 	

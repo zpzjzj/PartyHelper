@@ -59,25 +59,25 @@ public class ItemsListActivity extends Activity{
 	private Place p_place;
 
 	private Type p_type;
-	
+
 	private String query;
 	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_items_list);
 		itemLists = (ListView)findViewById(R.id.itemList);  
-		
+
 		query = null;
-		
+
 		ActionBar actionBar = getActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
-		
 
-		
-		p_minAge = Integer.valueOf(AgeRange.MIN_AGE);
-		p_maxAge = Integer.valueOf(AgeRange.MAX_AGE);
-		p_minNum = Integer.valueOf(PeopleNumRange.MIN_NUM);
-		p_maxNum = Integer.valueOf(PeopleNumRange.MAX_NUM);
+
+
+		p_minAge = null;
+		p_maxAge = null;
+		p_minNum = null;
+		p_maxNum = null;
 
 		spinnerAge = (Spinner)findViewById(R.id.spinnerAge);
 		ArrayAdapter<CharSequence> adapterAge = 
@@ -109,27 +109,27 @@ public class ItemsListActivity extends Activity{
 
 		adapterCount.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spinnerCounts.setOnItemSelectedListener(spinnerListener);
-		
+
 		spinnerCounts.setAdapter(adapterCount);
-		
+
 		handleIntent(getIntent());
 
 	}
-	
+
 	@Override
 	public void onStop(){
 		Log.d("OnStop", "stop!!!!!!!!!!!!!!!!!!");
 		super.onStop();
 		//finish();
 	}
-	
+
 	private void handleIntent(Intent intent) {
 		Log.d("handle", "ACTION: "+intent.getAction());
 		if (Intent.ACTION_VIEW.equals(intent.getAction())){
 			Log.d("handle", "ACTION_VIEW");
-			
+
 		} else if(Intent.ACTION_SEARCH.equals(intent.getAction())){
-			
+
 			query = intent.getStringExtra(SearchManager.QUERY);
 			Log.d("handle", "ACTION_SEARCH:"+ query);
 			listGames(query, null, null, null, null, null, null);
@@ -151,7 +151,7 @@ public class ItemsListActivity extends Activity{
 			}			
 			listAllGames();
 		}
-		
+
 	}
 
 	private OnItemSelectedListener spinnerListener = new OnItemSelectedListener(){
@@ -161,16 +161,22 @@ public class ItemsListActivity extends Activity{
 				long id) {
 			switch (adapter.getId()){
 			case R.id.spinnerAge:
-				p_minAge = SpinnerMap.getAgeRange(position).getMin();
-				p_maxAge = SpinnerMap.getAgeRange(position).getMax();
+				AgeRange age =SpinnerMap.getAgeRange(position);
+				if (age!=null){
+					p_minAge = age.getMin();
+					p_maxAge = age.getMax();
+				}
 				break;
 			case R.id.spinnerCounts:
-				p_minNum = SpinnerMap.getNumberRange(position).getMin();
-				p_maxNum = SpinnerMap.getNumberRange(position).getMax();
+				PeopleNumRange num = SpinnerMap.getNumberRange(position);
+				if (num!=null){
+					p_minNum = num.getMin();
+					p_maxNum = num.getMax();
+				}
 			case R.id.spinnerPlace:
 				p_place = SpinnerMap.getPlace(position);					
 			}
-			
+
 			Log.d("handle", "Update Game List");
 			updateGameList();
 		}
@@ -198,7 +204,6 @@ public class ItemsListActivity extends Activity{
 				long id) {
 			//Log.d(LOG_TAG, adapterView.getItemAtPosition(position).toString()); 
 			//Log.d(LOG_TAG, "position: "+String.valueOf(position)+"id: "+String.valueOf(id));
-
 			setUpGameItemActivity(adapterView.getItemAtPosition(position));
 		}
 
@@ -232,6 +237,15 @@ public class ItemsListActivity extends Activity{
 
 		GamesDataSource gameSource = new GamesDataSource(this);
 		gameSource.open();
+		Log.d("SearchInfo", 
+				"name :"+ name+
+				"minAge: "+ minAge+
+				"maxAge: "+maxAge+
+				"minNum:" + minNum+
+				"maxNum:" + maxNum);
+		Log.d("SearchInfo", 
+				"type: "+type+
+				"place: "+place);
 		List<Game> listGame = gameSource.getGames(name, minAge, maxAge, minNum, maxNum, type, place);
 
 		SimpleAdapter adapterList = 
@@ -285,13 +299,13 @@ public class ItemsListActivity extends Activity{
 		SearchManager searchManager = (SearchManager)getSystemService(Context.SEARCH_SERVICE);
 		searchView = (SearchView)menu.findItem(R.id.list_action_search).getActionView();
 		searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-		
+
 		typeView = (TextView)menu.findItem(R.id.list_action_type).getActionView();
 		typeView.setGravity(Gravity.CENTER);
 		typeView.setWidth(300);
 		typeView.setTextSize(20);
 		typeView.setText(typeMsg);
-		
+
 		query = getIntent().getStringExtra(SearchManager.QUERY);
 		Log.d("handle", "ACTION_SEARCH:"+ query);
 		listGames(query, null, null, null, null, null, null);

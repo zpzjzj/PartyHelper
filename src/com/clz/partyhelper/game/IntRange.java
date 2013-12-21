@@ -31,7 +31,13 @@ public class IntRange {
 	@Override
 	public String toString(){
 		String str = new String();
-		str = String.valueOf(min)+ " - " + String.valueOf(max);
+		if (min == max){
+			str = String.valueOf(min);
+		}
+		else {
+			str = String.valueOf(min)+ " - " + String.valueOf(max);
+		}
+		
 		return str;
 	}
 }

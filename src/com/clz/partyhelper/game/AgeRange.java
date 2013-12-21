@@ -6,10 +6,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public class AgeRange extends IntRange{
-	final static int MIN_AGE = 0;
-	final static int MAX_AGE = 200;
+	public final static int MIN_AGE = 0;
+	public final static int MAX_AGE = 200;
 	
-	AgeRange(int minAge, int maxAge){
+	public AgeRange(int minAge, int maxAge){
 		super(minAge, maxAge);
 	}
 	

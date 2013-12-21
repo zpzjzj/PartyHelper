@@ -19,7 +19,7 @@
     <string name="child_games">小清新</string>
     <!-- labels -->
     <string name="label_type">游戏类型:</string>
-    <string name="label_age">适合人群:</string>
+    <string name="label_age">适合年龄:</string>
     <string name="label_place">适合场所:</string>
     <string name="label_people_number">适合人数:</string>
     <string name="label_start">开始</string>
@@ -36,11 +36,11 @@
     </string-array>
     <string-array name="array_age">
         <item>全部年龄</item>
-        <item>0&#8211;10岁</item>
-        <item>11&#8211;16岁</item>
-        <item>17&#8211;22岁</item>
-        <item>23&#8211;30岁</item>
-        <item>30岁以上</item>
+        <item>小学生</item>
+        <item>初中生</item>
+        <item>高中生</item>
+        <item>大学生</item>
+        <item>上班族</item>
     </string-array>
     <string-array name="array_place">
         <item>所有场所</item>

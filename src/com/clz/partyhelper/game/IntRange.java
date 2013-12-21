@@ -10,7 +10,7 @@ public class IntRange {
 	private int min;
 	private int max;
 	
-	IntRange(int min, int max){
+	public IntRange(int min, int max){
 		this.min = min;
 		this.max = max;
 	}

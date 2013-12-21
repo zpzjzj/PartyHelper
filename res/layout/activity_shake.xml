@@ -3,7 +3,14 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="horizontal" >
-    
+    android:orientation="vertical" >
+
+           <ImageView
+            android:id="@+id/shake_big"
+            android:layout_width="300dip"
+            android:layout_height="300dip"
+            android:contentDescription="@string/content_img"
+            android:src="@drawable/shake_big_300x300" />
+
 
 </LinearLayout>

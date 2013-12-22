@@ -24,8 +24,8 @@ public class SpinnerMap {
 	
 	static public PeopleNumRange getNumberRange(int pos){
 		PeopleNumRange range = null;
-		int min=0;
-		int max=0;
+		int min=PeopleNumRange.MIN_NUM;
+		int max=PeopleNumRange.MAX_NUM;
 		switch (pos){
 		case 1:min = 2; max = 2; break;
 		case 2:min = 3; max = 5; break;

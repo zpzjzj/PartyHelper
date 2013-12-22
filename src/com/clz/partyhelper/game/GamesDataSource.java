@@ -130,10 +130,6 @@ public class GamesDataSource {
 			String defaultStr = new String("");
 			HashMap<Object, String> map = new HashMap<Object, String>(); 
 			map.put(name, SQLHelper.COLUMN_NAME + " LIKE '%" + (name != null ?name + "%'": defaultStr));
-			map.put(minAge, SQLHelper.COLUMN_MIN_AGE + " <= " + (minAge != null ? minAge.toString(): defaultStr));
-			map.put(maxAge, SQLHelper.COLUMN_MAX_AGE + " >= " + (maxAge != null ? maxAge.toString(): defaultStr));
-			map.put(minNum, SQLHelper.COLUMN_MIN_PEOPLE_NUM + " <= " + (minNum != null ? minNum.toString(): defaultStr));
-			map.put(maxNum, SQLHelper.COLUMN_MAX_PEOPLE_NUM + " >= " + (maxNum != null ? maxNum.toString(): defaultStr));
 			map.put(type, SQLHelper.COLUMN_TYPE + " == " + (type != null ? Integer.toString(type.ordinal()): defaultStr));
 			map.put(place, SQLHelper.COLUMN_PLACE + " == " + (place != null ? Integer.toString(place.ordinal()): defaultStr));	
 		
@@ -148,9 +144,33 @@ public class GamesDataSource {
 				}
 			}
 		}
+		
+		{
+			Integer min = (minAge != null) ? minAge : AgeRange.MIN_AGE;
+			Integer max = (maxAge != null) ? maxAge : AgeRange.MAX_AGE;
+			String str = SQLHelper.COLUMN_MIN_AGE + " <= " + max + " and " + SQLHelper.COLUMN_MAX_AGE + " >= " + min;
+			if(hasFormer)
+				selection += " and " + str;
+			else{
+				selection = new String(str);
+				hasFormer = true;
+			}
+			
+			min = (minNum != null) ? minNum : PeopleNumRange.MIN_NUM;
+			max = (maxNum != null) ? maxNum : PeopleNumRange.MAX_NUM;
+			str = SQLHelper.COLUMN_MIN_PEOPLE_NUM  + " <= " + max + " and " + SQLHelper.COLUMN_MAX_PEOPLE_NUM + " >= " + min;
+			if(hasFormer)
+				selection += " and " + str;
+			else{
+				selection = new String(str);
+				hasFormer = true;
+			}
+		}
+
 		Log.d(TAG, "selection: " + selection);
 		Cursor cursor = database.query(SQLHelper.TABLE_GAMES, allColumns, selection, null, null, null, null);
 		return getGames(cursor);
+
 	}
 
 	//from cursor returned by database query to a list of games 

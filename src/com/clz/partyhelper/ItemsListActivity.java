@@ -73,8 +73,6 @@ public class ItemsListActivity extends Activity{
 		ActionBar actionBar = getActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
 
-
-
 		p_minAge = null;
 		p_maxAge = null;
 		p_minNum = null;
